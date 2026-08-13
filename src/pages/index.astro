@@ -1,5 +1,25 @@
-<html>
+---
+import Navigation from '../components/layout/navigation/Navigation.astro'
+import '../styles/main.scss'
+
+const name: string = 'Noir Detailing'
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{name}</title>
+  </head>
+
   <body>
-    <p>Hello world</p>
+    <Navigation />
+
+    <main>
+      <section>
+        <h1>{name}</h1>
+        <p>Welcome to {name}!</p>
+      </section>
+    </main>
   </body>
 </html>
