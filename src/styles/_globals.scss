@@ -1,0 +1,38 @@
+@use './variables' as *;
+
+$container-padding: clamp(16px, 7.51vw - 12.16px, 96px);
+
+html {
+  background-color: $color-dark;
+  color: $color-light;
+  font-family: $font-family-base;
+  font-size: 100%;
+}
+
+body {
+  background-color: $color-dark;
+  color: $color-light;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-body;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $font-weight-bold;
+  line-height: $line-height-heading;
+}
+
+p {
+  max-width: 70ch;
+}
+
+.container {
+  margin-inline: auto;
+  width: min(100% - (#{$container-padding} * 2), $container-max-width);
+}
