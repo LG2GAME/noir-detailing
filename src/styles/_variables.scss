@@ -1,0 +1,51 @@
+// COLORS
+
+$color-light: #e2e8f0;
+$color-gray: #797b7c;
+$color-dark: #100e09;
+
+// TYPOGRAPHY
+
+$font-family-base: 'Roboto', sans-serif;
+
+$font-size-xs: clamp(14px, 0.188vw + 13.29px, 16px);
+$font-size-sm: clamp(18px, 0.188vw + 17.29px, 20px);
+$font-size-base: clamp(20px, 0.376vw + 18.59px, 24px);
+$font-size-md: clamp(28px, 0.376vw + 26.59px, 32px);
+$font-size-lg: clamp(32px, 0.376vw + 30.59px, 36px);
+$font-size-xl: clamp(32px, 0.751vw + 29.18px, 40px);
+$font-size-2xl: clamp(40px, 0.751vw + 37.18px, 48px);
+$font-size-3xl: clamp(64px, 1.502vw + 58.37px, 80px);
+
+$font-weight-regular: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+$line-height-heading: 1.2;
+$line-height-body: 1.5;
+
+// SPACING
+
+$spacing-3xs: 8px;
+$spacing-2xs: 12px;
+$spacing-xs: 16px;
+$spacing-sm: 24px;
+$spacing-md: 32px;
+$spacing-lg: clamp(32px, calc(0.75vw + 29.2px), 40px);
+$spacing-xl: clamp(40px, calc(0.75vw + 37.2px), 48px);
+$spacing-2xl: clamp(48px, calc(1.5vw + 42.4px), 64px);
+$spacing-3xl: clamp(64px, calc(1.5vw + 58.4px), 80px);
+$spacing-4xl: clamp(80px, calc(1.5vw + 74.4px), 96px);
+$spacing-5xl: clamp(96px, calc(3vw + 84.7px), 128px);
+
+// BREAKPOINTS
+
+$container-max-width: 1440px;
+
+$bp-mobile-sm: 375px;
+$bp-mobile-lg: 576px;
+$bp-tablet: 768px;
+$bp-laptop: 1024px;
+$bp-desktop: 1280px;
+$bp-wide: 1440px;
