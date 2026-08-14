@@ -1,0 +1,39 @@
+@use '@/styles/variables' as *;
+
+.navigation {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: 99;
+  background: $color-dark;
+  padding: $spacing-xs;
+
+  .burger {
+    display: flex;
+    flex-direction: column;
+    width: 36px;
+    gap: 6px;
+
+    span {
+      width: 100%;
+      height: 4px;
+      background: $color-light;
+      border-radius: 2px;
+    }
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .content {
+    width: 100%;
+    height: 100%;
+    .menu {
+    }
+    .career {
+    }
+  }
+}
