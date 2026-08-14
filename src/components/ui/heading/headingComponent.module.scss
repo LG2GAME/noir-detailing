@@ -1,0 +1,29 @@
+@use '@/styles/variables' as *;
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+
+  .tagline {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+  }
+
+  .header {
+    font-size: $font-size-xl;
+    font-weight: $font-weight-bold;
+  }
+
+  &.primary {
+    .tagline {
+      font-size: $font-size-base;
+    }
+
+    .header {
+      text-transform: uppercase;
+      font-size: $font-size-3xl;
+    }
+  }
+}

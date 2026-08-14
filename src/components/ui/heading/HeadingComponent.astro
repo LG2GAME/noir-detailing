@@ -1,0 +1,20 @@
+---
+import styles from './headingComponent.module.scss'
+
+interface Props {
+  tagline: string
+  type?: 'default' | 'primary'
+}
+
+const { tagline, type = 'default' } = Astro.props
+const isPrimary = type === 'primary'
+const TaglineTag = isPrimary ? 'p' : 'h2'
+const HeaderTag = isPrimary ? 'h1' : 'h3'
+---
+
+<div class:list={[styles.heading, isPrimary && styles.primary]}>
+  <TaglineTag class={styles.tagline}>&mdash; {tagline}</TaglineTag>
+  <HeaderTag class={styles.header}>
+    <slot />
+  </HeaderTag>
+</div>
