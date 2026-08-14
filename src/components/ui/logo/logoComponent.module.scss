@@ -1,0 +1,11 @@
+@use '@/styles/variables' as *;
+
+.logo {
+  text-transform: uppercase;
+  font-size: $font-size-md;
+
+  span {
+    color: $color-gray;
+    font-size: $font-size-sm;
+  }
+}
