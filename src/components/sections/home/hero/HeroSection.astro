@@ -1,0 +1,37 @@
+---
+import styles from './heroSection.module.scss'
+import video from '@/assets/videos/background_hero_1.mp4'
+import ButtonComponent from '@/components/ui/button/ButtonComponent.astro'
+import HeadingComponent from '@/components/ui/heading/HeadingComponent.astro'
+---
+
+<section class={styles.hero}>
+  <video
+    class={styles.video}
+    aria-label="Background hero video"
+    autoplay
+    loop
+    muted
+    playsinline
+    preload="auto"
+  >
+    <source src={video} type="video/mp4" />
+  </video>
+
+  <div class={`${styles.content} container`}>
+    <HeadingComponent type="primary" tagline="Based in London, UK"
+      >restoring beauty through precision</HeadingComponent
+    >
+
+    <div class={styles.intro}>
+      <p class={styles.description}>
+        Premium automotive detailing studio dedicated to restoring, protecting
+        and enhancing exceptional vehicles with precision craftsmanship.
+      </p>
+      <div class={styles.actions}>
+        <ButtonComponent href="/contact">Book appointment</ButtonComponent>
+        <ButtonComponent href="/portfolio">Garage</ButtonComponent>
+      </div>
+    </div>
+  </div>
+</section>
