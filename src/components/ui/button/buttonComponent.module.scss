@@ -1,0 +1,11 @@
+@use '@/styles/variables' as *;
+
+.button {
+  min-width: fit-content;
+  padding: $spacing-xs $spacing-sm;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $color-light;
+  text-transform: uppercase;
+}
