@@ -27,6 +27,8 @@ $line-height-body: 1.5;
 
 // SPACING
 
+$container-padding: clamp(16px, 7.51vw - 12.16px, 96px);
+
 $spacing-3xs: 8px;
 $spacing-2xs: 12px;
 $spacing-xs: 16px;

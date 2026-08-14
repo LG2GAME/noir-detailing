@@ -1,7 +1,5 @@
 @use './variables' as *;
 
-$container-padding: clamp(16px, 7.51vw - 12.16px, 96px);
-
 html {
   background-color: $color-dark;
   color: $color-light;
@@ -30,6 +28,10 @@ h6 {
 
 p {
   max-width: 70ch;
+}
+
+button {
+  color: $color-light;
 }
 
 .container {

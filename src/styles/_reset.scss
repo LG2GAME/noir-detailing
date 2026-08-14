@@ -11,6 +11,10 @@ html {
   scroll-behavior: smooth;
 }
 
+section {
+  z-index: 1;
+}
+
 ul,
 ol {
   list-style: none;
