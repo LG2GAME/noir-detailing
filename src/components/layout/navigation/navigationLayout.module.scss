@@ -1,39 +1,123 @@
 @use '@/styles/variables' as *;
 
-.navigation {
+.navigationWrapper {
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  overflow-x: hidden;
+  padding: $spacing-sm $container-padding;
   position: absolute;
+  top: 0;
+  transition: background-color 0.3s ease-in-out;
   width: 100%;
-  height: 100vh;
   z-index: 99;
-  background: $color-dark;
-  padding: $spacing-xs;
+
+  @media (min-width: $bp-tablet) {
+    flex-direction: row;
+    gap: $spacing-md;
+    height: auto;
+  }
 
   .burger {
     display: flex;
     flex-direction: column;
-    width: 36px;
     gap: 6px;
+    padding: 0;
+    width: 36px;
+
+    @media (min-width: $bp-tablet) {
+      display: none;
+    }
 
     span {
-      width: 100%;
-      height: 4px;
       background: $color-light;
       border-radius: 2px;
+      height: 4px;
+      transition: all 0.3s ease;
+      width: 100%;
     }
   }
 
   .brand {
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: space-between;
   }
 
-  .content {
-    width: 100%;
+  &.open {
+    height: 100vh;
+    background-color: #000;
+
+    .navigation {
+      transform: translateX(0);
+    }
+
+    .burger {
+      span {
+        &:nth-child(1) {
+          transform: translateY(10px) rotate(45deg);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:nth-child(3) {
+          transform: translateY(-10px) rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-2xl;
     height: 100%;
+    justify-content: end;
+    padding: $spacing-2xl 0;
+    transform: translateX(-125%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 98;
+
+    @media (min-width: $bp-tablet) {
+      align-items: center;
+      flex-direction: row;
+      gap: $spacing-md;
+      justify-content: space-between;
+      padding: 0;
+      transform: translateX(0);
+      width: 100%;
+    }
+
     .menu {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-sm;
+      margin-bottom: auto;
+
+      @media (min-width: $bp-tablet) {
+        flex-direction: row;
+        margin-bottom: 0;
+      }
+
+      li {
+        font-size: $font-size-md;
+        text-transform: capitalize;
+
+        @media (min-width: $bp-tablet) {
+          font-size: $font-size-base;
+        }
+      }
     }
     .career {
+      font-size: $font-size-sm;
+
+      @media (min-width: $bp-tablet) {
+        display: none;
+      }
+
+      a {
+        text-decoration: underline;
+      }
     }
   }
 }
