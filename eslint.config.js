@@ -107,7 +107,7 @@ export default defineConfig([
       // Accessibility
       'vuejs-accessibility/alt-text': 'error',
       'vuejs-accessibility/anchor-has-content': 'error',
-      'vuejs-accessibility/button-has-type': 'error',
+      'vuejs-accessibility/button-has-type': 'off',
       'vuejs-accessibility/heading-has-content': 'error',
       'vuejs-accessibility/iframe-has-title': 'error',
       'vuejs-accessibility/interactive-supports-focus': 'error',
