@@ -1,29 +1,5 @@
 ---
-import styles from './navigationLayout.module.scss'
-import LogoComponent from '@/components/ui/logo/LogoComponent.astro'
-import ButtonComponent from '@/components/ui/button/ButtonComponent.astro'
+import NavigationComponent from './NavigationComponent.vue'
 ---
 
-<nav class={styles.navigation}>
-  <div class={styles.brand}>
-    <LogoComponent />
-    <button class={styles.burger}>
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </div>
-  <div class={styles.content}>
-    <ul class={styles.menu}>
-      <li><a href="/">home</a></li>
-      <li><a href="/services">services</a></li>
-      <li><a href="/portfolio">portfolio</a></li>
-      <li><a href="/about">about</a></li>
-    </ul>
-    <div class={styles.career}>
-      <p>Looking for a new career?</p>
-      <a href="/contact">Get in touch</a>
-    </div>
-    <ButtonComponent href="/contact">Contact</ButtonComponent>
-  </div>
-</nav>
+<NavigationComponent client:load />
