@@ -1,0 +1,25 @@
+---
+import ContentWrapper from '@/components/layout/wrapper/ContentWrapper.astro'
+import HeadingComponent from '@/components/ui/heading/HeadingComponent.astro'
+import styles from './servicesSection.module.scss'
+import ServicesCardComponent from '@/components/ui/servicesCard/ServicesCardComponent.astro'
+import { services } from '@/assets/data/services.ts'
+---
+
+<section class={styles.services}>
+  <ContentWrapper>
+    <HeadingComponent type="default" tagline="Services"
+      >Services Designed To Protect Perfection</HeadingComponent
+    >
+    {
+      services.map((service) => (
+        <ServicesCardComponent
+          image={service.image}
+          header={service.header}
+          list={service.list}
+          link={service.link}
+        />
+      ))
+    }
+  </ContentWrapper>
+</section>
