@@ -3,6 +3,7 @@ import styles from './heroSection.module.scss'
 import video from '@/assets/videos/background_hero_1.mp4'
 import ButtonComponent from '@/components/ui/button/ButtonComponent.astro'
 import HeadingComponent from '@/components/ui/heading/HeadingComponent.astro'
+import ContentWrapper from '@/components/layout/wrapper/ContentWrapper.astro'
 ---
 
 <section class={styles.hero}>
@@ -18,7 +19,7 @@ import HeadingComponent from '@/components/ui/heading/HeadingComponent.astro'
     <source src={video} type="video/mp4" />
   </video>
 
-  <div class={`${styles.content} container`}>
+  <ContentWrapper class={styles.content}>
     <HeadingComponent type="primary" tagline="Based in London, UK"
       >restoring beauty through precision</HeadingComponent
     >
@@ -33,5 +34,5 @@ import HeadingComponent from '@/components/ui/heading/HeadingComponent.astro'
         <ButtonComponent href="/portfolio">Garage</ButtonComponent>
       </div>
     </div>
-  </div>
+  </ContentWrapper>
 </section>
