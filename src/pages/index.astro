@@ -1,7 +1,9 @@
 ---
 import '@/styles/main.scss'
-import HomePage from '@/components/page/HomePage.astro'
 import NavigationLayout from '@/components/layout/navigation/NavigationLayout.astro'
+import HeroSection from '@/components/sections/home/hero/HeroSection.astro'
+import StatisticsSection from '@/components/sections/home/statistics/StatisticsSection.astro'
+import ServicesSection from '@/components/sections/home/services/ServicesSection.astro'
 ---
 
 <html lang="en">
@@ -13,6 +15,10 @@ import NavigationLayout from '@/components/layout/navigation/NavigationLayout.as
 
   <body>
     <NavigationLayout />
-    <HomePage />
+    <main>
+      <HeroSection />
+      <StatisticsSection />
+      <ServicesSection />
+    </main>
   </body>
 </html>
