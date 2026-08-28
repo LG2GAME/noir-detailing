@@ -1,0 +1,6 @@
+@use '@/styles/variables' as *;
+
+.contentWrapper {
+  margin-inline: auto;
+  width: min(100% - (#{$container-padding} * 2), $container-max-width);
+}
