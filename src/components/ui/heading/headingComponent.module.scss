@@ -9,6 +9,20 @@
     font-size: $font-size-sm;
     font-weight: $font-weight-bold;
     text-transform: uppercase;
+    position: relative;
+    padding-left: 48px;
+
+    &:before {
+      // &mdash;
+      background-color: $color-light;
+      content: '';
+      height: 3px;
+      left: 0;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+    }
   }
 
   .header {

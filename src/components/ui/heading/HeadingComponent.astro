@@ -13,7 +13,7 @@ const HeaderTag = isPrimary ? 'h1' : 'h3'
 ---
 
 <div class:list={[styles.heading, isPrimary && styles.primary]}>
-  <TaglineTag class={styles.tagline}>&mdash; {tagline}</TaglineTag>
+  <TaglineTag class={styles.tagline}>{tagline}</TaglineTag>
   <HeaderTag class={styles.header}>
     <slot />
   </HeaderTag>
