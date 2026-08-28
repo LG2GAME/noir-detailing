@@ -12,7 +12,7 @@
   width: 100%;
   z-index: 99;
 
-  @media (min-width: $bp-tablet) {
+  @media (min-width: $bp-laptop) {
     flex-direction: row;
     gap: $spacing-md;
     height: auto;
@@ -25,7 +25,7 @@
     padding: 0;
     width: 36px;
 
-    @media (min-width: $bp-tablet) {
+    @media (min-width: $bp-laptop) {
       display: none;
     }
 
@@ -78,7 +78,7 @@
     transition: transform 0.3s ease-in-out;
     z-index: 98;
 
-    @media (min-width: $bp-tablet) {
+    @media (min-width: $bp-laptop) {
       align-items: center;
       flex-direction: row;
       gap: $spacing-md;
@@ -94,7 +94,7 @@
       gap: $spacing-sm;
       margin-bottom: auto;
 
-      @media (min-width: $bp-tablet) {
+      @media (min-width: $bp-laptop) {
         flex-direction: row;
         margin-bottom: 0;
       }
@@ -103,7 +103,7 @@
         font-size: $font-size-md;
         text-transform: capitalize;
 
-        @media (min-width: $bp-tablet) {
+        @media (min-width: $bp-laptop) {
           font-size: $font-size-base;
         }
       }
@@ -111,7 +111,7 @@
     .career {
       font-size: $font-size-sm;
 
-      @media (min-width: $bp-tablet) {
+      @media (min-width: $bp-laptop) {
         display: none;
       }
 
