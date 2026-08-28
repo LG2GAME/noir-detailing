@@ -1,0 +1,17 @@
+@use '@/styles/variables' as *;
+
+.statistics {
+  margin-top: $spacing-5xl;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xl;
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: $spacing-md;
+    }
+  }
+}

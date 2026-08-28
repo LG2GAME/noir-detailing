@@ -1,0 +1,22 @@
+---
+import HeadingComponent from '@/components/ui/heading/HeadingComponent.astro'
+import ContentWrapper from '@/components/layout/wrapper/ContentWrapper.astro'
+import styles from './statisticsSection.module.scss'
+import StatisticsCardComponent from '@/components/ui/statisticsCard/StatisticsCardComponent.astro'
+import { statistics } from '@/assets/data/statistics.ts'
+---
+
+<section class={styles.statistics}>
+  <ContentWrapper class={styles.content}>
+    <HeadingComponent type="default" tagline="Statistics"
+      >Excellence In Every Detail</HeadingComponent
+    >
+    <div class={styles.cards}>
+      {
+        statistics.map((stat: { value: string; label: string }) => (
+          <StatisticsCardComponent value={stat.value} label={stat.label} />
+        ))
+      }
+    </div>
+  </ContentWrapper>
+</section>
