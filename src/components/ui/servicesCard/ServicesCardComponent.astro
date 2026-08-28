@@ -1,0 +1,21 @@
+---
+import styles from './servicesCardComponent.module.scss'
+
+interface Props {
+  image: { src: string; alt: string }
+  header: string
+  list: string[]
+  link: string
+}
+
+const { image, header, list, link } = Astro.props as Props
+---
+
+<div class={styles.card}>
+  <img src={image.src} alt={image.alt} />
+  <h3>{header}</h3>
+  <ul>
+    {list.map((item) => <li>{item}</li>)}
+  </ul>
+  <a href={link}>Learn More</a>
+</div>
