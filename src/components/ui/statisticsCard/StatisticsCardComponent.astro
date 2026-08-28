@@ -1,0 +1,15 @@
+---
+import styles from './statisticsCardComponent.module.scss'
+
+interface Props {
+  value: string
+  label: string
+}
+
+const { value, label } = Astro.props as Props
+---
+
+<div class={styles.card}>
+  <p>{value}</p>
+  <h4>{label}</h4>
+</div>

@@ -1,0 +1,30 @@
+@use '@/styles/variables' as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-3xs;
+  padding: $spacing-2xs $spacing-sm;
+  position: relative;
+
+  &:before {
+    height: 100%;
+    position: absolute;
+    width: 2px;
+    content: '';
+    background-color: $color-gray;
+    left: 0;
+    top: 0;
+  }
+
+  p {
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-bold;
+    line-height: 1.2;
+  }
+
+  h4 {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+  }
+}
