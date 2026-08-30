@@ -1,5 +1,6 @@
 ---
 import styles from './statisticsCardComponent.module.scss'
+import CardWrapper from '@/components/layout/cardWrapper/CardWrapper.astro'
 
 interface Props {
   value: string
@@ -9,7 +10,7 @@ interface Props {
 const { value, label } = Astro.props as Props
 ---
 
-<div class={styles.card}>
+<CardWrapper size="small" class={styles.card}>
   <p>{value}</p>
   <h4>{label}</h4>
-</div>
+</CardWrapper>
