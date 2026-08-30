@@ -1,0 +1,26 @@
+---
+import ContentWrapper from '@/components/layout/wrapper/ContentWrapper.astro'
+import HeadingComponent from '@/components/ui/heading/HeadingComponent.astro'
+import styles from './whyUsSection.module.scss'
+import WhyUsCardComponent from '@/components/ui/whyUsCard/WhyUsCardComponent.astro'
+import { whyNoir } from '@/assets/data/whyNoir.ts'
+---
+
+<section class={styles.whyUs}>
+  <ContentWrapper>
+    <HeadingComponent type="default" tagline="Why noir"
+      >The Difference Is In The Detail</HeadingComponent
+    >
+    {
+      whyNoir.map(
+        (whyNoir: { title: string; description: string; link: string }) => (
+          <WhyUsCardComponent
+            title={whyNoir.title}
+            description={whyNoir.description}
+            link={whyNoir.link}
+          />
+        )
+      )
+    }
+  </ContentWrapper>
+</section>
