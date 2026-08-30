@@ -1,0 +1,15 @@
+@use '@/styles/variables' as *;
+
+.cardWrapper {
+  display: flex;
+  flex-direction: column;
+
+  &.small {
+    gap: $spacing-3xs;
+    padding: $spacing-2xs $spacing-sm;
+  }
+
+  &.normal {
+    gap: $spacing-md;
+  }
+}

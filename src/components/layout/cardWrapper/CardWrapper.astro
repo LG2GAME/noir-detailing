@@ -1,0 +1,20 @@
+---
+import style from './cardWrapper.module.scss'
+
+interface Props {
+  size?: 'none' | 'small' | 'normal'
+  class?: string
+}
+
+const { size = 'normal', class: cardClass } = Astro.props
+
+const sizeClass = {
+  none: null,
+  small: style.small,
+  normal: style.normal
+}[size]
+---
+
+<div class:list={[style.cardWrapper, sizeClass, cardClass]}>
+  <slot />
+</div>
