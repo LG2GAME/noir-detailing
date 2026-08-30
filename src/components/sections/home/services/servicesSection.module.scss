@@ -2,4 +2,20 @@
 
 .services {
   margin-top: $spacing-5xl;
+
+  .servicesWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-2xl;
+  }
+
+  .servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $spacing-md;
+  }
+
+  .button {
+    margin-left: auto;
+  }
 }

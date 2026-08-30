@@ -4,22 +4,28 @@ import HeadingComponent from '@/components/ui/heading/HeadingComponent.astro'
 import styles from './servicesSection.module.scss'
 import ServicesCardComponent from '@/components/ui/servicesCard/ServicesCardComponent.astro'
 import { services } from '@/assets/data/services.ts'
+import ButtonComponent from '@/components/ui/button/ButtonComponent.astro'
 ---
 
 <section class={styles.services}>
-  <ContentWrapper>
+  <ContentWrapper class={styles.servicesWrapper}>
     <HeadingComponent type="default" tagline="Services"
       >Services Designed To Protect Perfection</HeadingComponent
     >
-    {
-      services.map((service) => (
-        <ServicesCardComponent
-          image={service.image}
-          header={service.header}
-          list={service.list}
-          link={service.link}
-        />
-      ))
-    }
+    <div class={styles.servicesGrid}>
+      {
+        services.map((service) => (
+          <ServicesCardComponent
+            image={service.image}
+            header={service.header}
+            list={service.list}
+            link={service.link}
+          />
+        ))
+      }
+    </div>
+    <ButtonComponent href="/services" class={styles.button}
+      >View All Services</ButtonComponent
+    >
   </ContentWrapper>
 </section>
