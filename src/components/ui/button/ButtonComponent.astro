@@ -4,9 +4,11 @@ import styles from './buttonComponent.module.scss'
 interface Props {
   href?: string
   type?: 'button'
+  class?: string
 }
 
-const { href = '#', type = 'button' } = Astro.props
+const { href = '#', type = 'button', class: buttonClass } = Astro.props
 ---
 
-<a href={href} class={styles.button}><slot /></a>
+<a href={href} class:list={[styles.button, buttonClass]} type={type}><slot /></a
+>
