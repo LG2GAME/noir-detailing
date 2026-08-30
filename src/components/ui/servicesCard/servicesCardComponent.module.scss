@@ -1,5 +1,32 @@
 @use '@/styles/variables' as *;
 
-.card {
-  background: $color-gray;
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+  padding: $spacing-sm;
+  border: 1px solid $color-light;
+  border-top: none;
+
+  h4 {
+    font-size: $font-size-lg;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+    list-style-type: disc;
+    padding-left: $spacing-sm;
+
+    li {
+      font-size: $font-size-sm;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+    margin-left: auto;
+    font-size: $font-size-sm;
+  }
 }
