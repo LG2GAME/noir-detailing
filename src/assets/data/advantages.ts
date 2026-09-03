@@ -1,6 +1,6 @@
 import cube from '../icons/cube.svg'
 
-export const whyNoir: {
+export const advantages: {
   icon: { src: string; alt: string }
   title: string
   description: string

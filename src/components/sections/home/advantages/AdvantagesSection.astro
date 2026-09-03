@@ -1,9 +1,9 @@
 ---
 import ContentWrapper from '@/components/layout/wrapper/ContentWrapper.astro'
 import HeadingComponent from '@/components/ui/heading/HeadingComponent.astro'
-import styles from './whyUsSection.module.scss'
+import styles from './advantagesSection.module.scss'
 import WhyUsCardComponent from '@/components/ui/whyUsCard/WhyUsCardComponent.astro'
-import { whyNoir } from '@/assets/data/whyNoir.ts'
+import { advantages } from '@/assets/data/advantages.ts'
 ---
 
 <section class={styles.advantages}>
@@ -13,7 +13,7 @@ import { whyNoir } from '@/assets/data/whyNoir.ts'
     >
     <div class={styles.advantagesGrid}>
       {
-        whyNoir.map(
+        advantages.map(
           (whyNoir: {
             icon: { src: string; alt: string }
             title: string
