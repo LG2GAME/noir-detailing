@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { VueCompareImage } from 'vue3-compare-image'
 
-import beforeImage from '@/assets/images/gallery_after_1.webp'
-import afterImage from '@/assets/images/gallery_before_1.webp'
+import afterImage from '@/assets/images/gallery_after_1.webp'
+import beforeImage from '@/assets/images/gallery_before_1.webp'
 </script>
 
 <template>
