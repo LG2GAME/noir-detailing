@@ -6,21 +6,29 @@ import WhyUsCardComponent from '@/components/ui/whyUsCard/WhyUsCardComponent.ast
 import { whyNoir } from '@/assets/data/whyNoir.ts'
 ---
 
-<section class={styles.whyUs}>
-  <ContentWrapper>
+<section class={styles.advantages}>
+  <ContentWrapper class={styles.advantagesWrapper}>
     <HeadingComponent type="default" tagline="Why noir"
       >The Difference Is In The Detail</HeadingComponent
     >
-    {
-      whyNoir.map(
-        (whyNoir: { title: string; description: string; link: string }) => (
-          <WhyUsCardComponent
-            title={whyNoir.title}
-            description={whyNoir.description}
-            link={whyNoir.link}
-          />
+    <div class={styles.advantagesGrid}>
+      {
+        whyNoir.map(
+          (whyNoir: {
+            icon: { src: string; alt: string }
+            title: string
+            description: string
+            link: string
+          }) => (
+            <WhyUsCardComponent
+              icon={whyNoir.icon}
+              title={whyNoir.title}
+              description={whyNoir.description}
+              link={whyNoir.link}
+            />
+          )
         )
-      )
-    }
+      }
+    </div>
   </ContentWrapper>
 </section>

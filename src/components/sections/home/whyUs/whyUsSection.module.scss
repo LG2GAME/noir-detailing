@@ -1,5 +1,17 @@
 @use '@/styles/variables' as *;
 
-.whyUs {
+.advantages {
   margin-top: $spacing-5xl;
+
+  .advantagesWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-2xl;
+  }
+
+  .advantagesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $spacing-md;
+  }
 }

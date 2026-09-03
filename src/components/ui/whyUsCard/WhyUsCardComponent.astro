@@ -1,18 +1,20 @@
 ---
 import CardWrapper from '@/components/layout/cardWrapper/CardWrapper.astro'
+import styles from './whyUsCardComponent.module.scss'
 
 interface Props {
+  icon: { src: string; alt: string }
   title: string
   description: string
   link: string
 }
 
-const { title, description, link }: Props = Astro.props
+const { icon, title, description, link }: Props = Astro.props
 ---
 
-<CardWrapper>
-  <img src="@/assets/icons/cube.svg" alt="icon" />
+<CardWrapper size="normal" class={styles.card}>
+  <img src={icon.src} alt={icon.alt} width="24px" height="24px" />
   <h4>{title}</h4>
   <p>{description}</p>
-  <a href={link} target="_blank" rel="noopener noreferrer"> Learn More </a>
+  <a href={link}> Learn More </a>
 </CardWrapper>

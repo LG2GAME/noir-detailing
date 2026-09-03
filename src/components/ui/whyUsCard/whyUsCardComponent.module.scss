@@ -1,0 +1,19 @@
+@use '@/styles/variables' as *;
+
+.card {
+  border: 1px solid $color-light;
+
+  h4 {
+    font-size: $font-size-md;
+  }
+
+  p,
+  a {
+    font-size: $font-size-sm;
+  }
+
+  a {
+    text-decoration: underline;
+    margin-left: auto;
+  }
+}
