@@ -1,0 +1,15 @@
+---
+import ContentWrapper from '@/components/layout/wrapper/ContentWrapper.astro'
+import HeadingComponent from '@/components/ui/heading/HeadingComponent.astro'
+import styles from './makeoverSection.module.scss'
+import BeforeAfterComponent from '@/components/ui/makeoverGallery/BeforeAfterComponent.vue'
+---
+
+<section class={styles.makeover}>
+  <ContentWrapper class={styles.makeoverWrapper}>
+    <HeadingComponent type="default" tagline="Before and After"
+      >See The Difference Precision Makes</HeadingComponent
+    >
+    <BeforeAfterComponent client:load />
+  </ContentWrapper>
+</section>

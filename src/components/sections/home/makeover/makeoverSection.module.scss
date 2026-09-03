@@ -1,0 +1,11 @@
+@use '@/styles/variables' as *;
+
+.makeover {
+  margin-top: $spacing-5xl;
+
+  .makeoverWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xl;
+  }
+}
