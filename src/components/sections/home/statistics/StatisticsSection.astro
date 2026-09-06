@@ -7,13 +7,13 @@ import { statistics } from '@/assets/data/statistics.ts'
 ---
 
 <section class={styles.statistics}>
-  <ContentWrapper class={styles.content}>
+  <ContentWrapper class={styles.statisticsWrapper}>
     <HeadingComponent type="default" tagline="Statistics"
       >Excellence In Every Detail</HeadingComponent
     >
-    <div class={styles.cards}>
+    <div class={styles.statisticsGrid}>
       {
-        statistics.map((stat: { value: string; label: string }) => (
+        statistics.map((stat) => (
           <StatisticsCardComponent value={stat.value} label={stat.label} />
         ))
       }
