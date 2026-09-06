@@ -3,7 +3,7 @@
 .makeover {
   margin-top: $spacing-5xl;
 
-  .makeoverWrapper {
+  &Wrapper {
     display: flex;
     flex-direction: column;
     gap: $spacing-xl;
