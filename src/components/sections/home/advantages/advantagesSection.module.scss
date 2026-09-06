@@ -3,13 +3,13 @@
 .advantages {
   margin-top: $spacing-5xl;
 
-  .advantagesWrapper {
+  &Wrapper {
     display: flex;
     flex-direction: column;
     gap: $spacing-2xl;
   }
 
-  .advantagesGrid {
+  &Grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: $spacing-md;

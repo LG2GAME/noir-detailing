@@ -7,27 +7,20 @@ import { advantages } from '@/assets/data/advantages.ts'
 ---
 
 <section class={styles.advantages}>
-  <ContentWrapper class={styles.advantagesWrapper}>
+  <ContentWrapper class={styles.advantagesContent}>
     <HeadingComponent type="default" tagline="Why noir"
       >The Difference Is In The Detail</HeadingComponent
     >
     <div class={styles.advantagesGrid}>
       {
-        advantages.map(
-          (whyNoir: {
-            icon: { src: string; alt: string }
-            title: string
-            description: string
-            link: string
-          }) => (
-            <WhyUsCardComponent
-              icon={whyNoir.icon}
-              title={whyNoir.title}
-              description={whyNoir.description}
-              link={whyNoir.link}
-            />
-          )
-        )
+        advantages.map((whyNoir) => (
+          <WhyUsCardComponent
+            icon={whyNoir.icon}
+            title={whyNoir.title}
+            description={whyNoir.description}
+            link={whyNoir.link}
+          />
+        ))
       }
     </div>
   </ContentWrapper>
