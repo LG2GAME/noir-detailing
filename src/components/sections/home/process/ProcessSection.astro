@@ -1,0 +1,26 @@
+---
+import ContentWrapper from '@/components/layout/wrapper/ContentWrapper.astro'
+import HeadingComponent from '@/components/ui/heading/HeadingComponent.astro'
+import styles from './processSection.module.scss'
+import ProcessCard from '@/components/ui/processCard/ProcessCard.astro'
+import { process } from '@/assets/data/process.ts'
+---
+
+<section class={styles.process}>
+  <ContentWrapper class={styles.processWrapper}>
+    <HeadingComponent type="default" tagline="Services"
+      >Services Designed To Protect Perfection</HeadingComponent
+    >
+    <div class={styles.processGrid}>
+      {
+        process.map((item) => (
+          <ProcessCard
+            id={item.id}
+            title={item.title}
+            description={item.description}
+          />
+        ))
+      }
+    </div>
+  </ContentWrapper>
+</section>

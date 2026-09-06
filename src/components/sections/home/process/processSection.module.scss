@@ -1,0 +1,21 @@
+@use '@/styles/variables' as *;
+
+.process {
+  margin-top: $spacing-5xl;
+
+  &Wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-2xl;
+  }
+
+  &Grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-md;
+
+    @media (min-width: $bp-tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
